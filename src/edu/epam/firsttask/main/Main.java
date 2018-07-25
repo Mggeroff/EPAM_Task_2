@@ -23,17 +23,21 @@ public class Main {
 
         ArrayCreator creator = new ArrayCreator();
         int[] numbers = creator.factoryArray(strNumbers);
+
         int[] numbersCopy = Arrays.copyOf(numbers, numbers.length);
 
         logger.info(Arrays.toString(numbers));
 
         SortArray sort = new SortArray();
-        // Throws ArrayIndexOfBoundException
-//        logger.info(Arrays.toString(sort.quickSort(numbers)));
-        logger.info(Arrays.toString(sort.bubbleSort(numbersCopy)));
-        logger.info(Arrays.toString(ArrayReverse.reverse(numbersCopy)));
+
+        int[] sortedNums = sort.bubbleSort(numbers);
+        logger.info(Arrays.toString(sortedNums));
+
+        int[] reversedNums = ArrayReverse.reverse(numbers);
+        logger.info(Arrays.toString(reversedNums));
 
         Palindrome palindrome = new Palindrome();
-        logger.info("Palindrome: ", palindrome.checkPalindrome(numbers));
+        logger.info(palindrome.checkPalindrome(numbers));
+        logger.info(palindrome.checkPalindrome(reversedNums));
     }
 }
