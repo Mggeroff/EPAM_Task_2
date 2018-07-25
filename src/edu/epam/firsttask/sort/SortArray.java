@@ -49,7 +49,7 @@ public class SortArray {
         if (low < right) {
             qs(array, low, right);
         }
-        if (left < high) {
+        if (high > left) {
             qs(array, left, high);
         }
     }
@@ -70,17 +70,6 @@ public class SortArray {
             }
         }
 
-        return array;
-    }
-
-    public int[] reverse(int[] array) {
-        int length = array.length;
-
-        for (int i = 0; i < length / 2; i++) {
-            int temp = array[i];
-            array[i] = array[length - i - 1];
-            array[length - i - 1] = temp;
-        }
         return array;
     }
 }

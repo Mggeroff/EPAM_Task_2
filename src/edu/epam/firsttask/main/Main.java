@@ -1,6 +1,8 @@
 package edu.epam.firsttask.main;
 
-import edu.epam.firsttask.creator.ArrayCreator;
+import edu.epam.firsttask.arrays.util.ArrayCreator;
+import edu.epam.firsttask.arrays.util.ArrayReverse;
+import edu.epam.firsttask.calc.Palindrome;
 import edu.epam.firsttask.reader.ConsoleReader;
 import edu.epam.firsttask.sort.SortArray;
 import edu.epam.firsttask.validator.StringFilter;
@@ -26,14 +28,12 @@ public class Main {
         logger.info(Arrays.toString(numbers));
 
         SortArray sort = new SortArray();
-        logger.info(Arrays.toString(sort.quickSort(numbers)));
+        // Throws ArrayIndexOfBoundException
+//        logger.info(Arrays.toString(sort.quickSort(numbers)));
         logger.info(Arrays.toString(sort.bubbleSort(numbersCopy)));
-        logger.info(Arrays.toString(sort.reverse(numbersCopy)));
+        logger.info(Arrays.toString(ArrayReverse.reverse(numbersCopy)));
+
+        Palindrome palindromeCheck = new Palindrome();
+        logger.info(palindromeCheck.checkPalindrome(numbers));
     }
 }
-/*
-Input:
-
-    565 fa    45d 3563 gg    335 32   12 fa 65
-
- */
