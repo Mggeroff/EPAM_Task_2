@@ -17,7 +17,7 @@ public class ConsoleReader {
         logger.log(Level.INFO, "Enter numbers, separated by space. To finish press enter.");
         String input = scanner.nextLine();
 
-        String[] numbers = input.trim().split(REGEX_DELIMITER);
-        return numbers;
+        String[] stringArray = input.trim().split(REGEX_DELIMITER);
+        return stringArray;
     }
 }
