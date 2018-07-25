@@ -1,4 +1,4 @@
-package edu.epam.firsttask.arrays.util;
+package edu.epam.firsttask.util.arrays;
 
 public class ArrayReverse {
     public static int[] reverse(int[] array) {

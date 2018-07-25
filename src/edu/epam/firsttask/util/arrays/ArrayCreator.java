@@ -1,4 +1,4 @@
-package edu.epam.firsttask.arrays.util;
+package edu.epam.firsttask.util.arrays;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
