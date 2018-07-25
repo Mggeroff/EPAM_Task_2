@@ -42,16 +42,17 @@ public class SortArray {
                 array[left] = array[right];
                 array[right] = temp;
                 left++;
-                right++;
+                right--;
             }
         }
 
         if (low < right) {
             qs(array, low, right);
         }
-        if (high > left) {
+        if (left < high) {
             qs(array, left, high);
         }
+
     }
 
     public int[] bubbleSort(int[] array) {
