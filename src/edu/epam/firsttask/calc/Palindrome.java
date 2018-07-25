@@ -9,6 +9,11 @@ public class Palindrome {
     private boolean isPalindrome(int number) {
         String str = Integer.toString(number);
         int length = str.length();
+
+        if (length < 2) {
+            return false;
+        }
+
         for (int i = 0; i < length / 2; i++) {
             if (str.charAt(i) != str.charAt(length - 1 - i)) {
                 return false;
@@ -37,7 +42,7 @@ public class Palindrome {
 
         if (palindromes.length == 0) {
             logger.info("PALINDROME IS NOT FOUND.");
-            return 1;
+            return 0;
         } else if (palindromes.length > 1) {
             return palindromes[1];
         } else {

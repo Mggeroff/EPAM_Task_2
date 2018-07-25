@@ -33,7 +33,7 @@ public class Main {
         logger.info(Arrays.toString(sort.bubbleSort(numbersCopy)));
         logger.info(Arrays.toString(ArrayReverse.reverse(numbersCopy)));
 
-        Palindrome palindromeCheck = new Palindrome();
-        logger.info(palindromeCheck.checkPalindrome(numbers));
+        Palindrome palindrome = new Palindrome();
+        logger.info("Palindrome: ", palindrome.checkPalindrome(numbers));
     }
 }
